@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado do Simulador</title>
+</head>
+<body>
+    <h1>Resultado do Simulador</h1>
+    <p><strong>Saldo Final:</strong> R$ {{ saldo_final }}</p>
+
+    <h2>Evolução do Saldo:</h2>
+    <ul>
+    {% for saldo in historico %}
+        <li>R$ {{ saldo }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Gráfico da Evolução:</h2>
+    <img src="data:image/png;base64,{{ grafico }}" alt="Gráfico da Evolução do Saldo">
+
+    <br><br>
+    <a href="/simulador">Fazer outro cálculo</a>
+</body>
+</html>
